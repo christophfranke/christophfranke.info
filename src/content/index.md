@@ -1,20 +1,20 @@
 # Christoph Franke
 
 
-## Freelance Web Developer
+### Freelance Web Developer
 *Javascript, Vue, React, Node*
 ### <a class="liame">...</a>
 
 ## Education
 
-- Diploma in Mathematics and Informatics (2014)
+- Diploma (equivalent to Master) in Mathematics and Informatics at the Cologny University (2014)
 
 ## Previous employers
-- Cologne University
-- Fraunhofer SCAI
-- Nvidia Coorp
-- The Good Evil GmbH
-- RaguseScheer GmbH
+- [Cologne University](https://www.zaik.uni-koeln.de/)
+- [Fraunhofer SCAI](https://www.scai.fraunhofer.de/en/business-research-areas/fast-solvers/products/samg.html)
+- [Nvidia Coorp](https://developer.nvidia.com/amgx)
+- [The Good Evil GmbH](http://thegoodevil.com/)
+- [RaguseScheer GmbH](https://ragusescheer.de/)
 
 ## Online Projects:
 
