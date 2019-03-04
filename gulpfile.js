@@ -2,8 +2,15 @@ const gulp = require('gulp')
 const pug = require('gulp-pug')
 const sass = require('gulp-sass')
 const md = require('markdown-it')({ html: true })
+const mila = require('markdown-it-link-attributes')
 const connect = require('gulp-connect')
 
+md.use(mila, {
+  attrs: {
+    target: '_blank',
+    rel: 'noopener'
+  }
+})
 
 gulp.task('connect', done => {
   connect.server({
