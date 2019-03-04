@@ -3,7 +3,7 @@
 
 ## Freelance Web Developer
 *Javascript, Vue, React, Node*
-### <hallo@christophfranke.info>
+### <a class="liame">...</a>
 
 ## Projects:
 
@@ -17,7 +17,7 @@
 - <https://naturloft.de>
 
 ### Krito and the Stoker
-*Pixi, React, ES6, Sass, Gulp, Webpack*
+*Pixi, React, ES6, Sass, Gulp, Webpack, Jest*
 
 - <https://kritoandthestoker.de>
 - <https://play-americas.com>
