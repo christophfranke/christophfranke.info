@@ -57,3 +57,11 @@
 - <http://tondeo.de/blazor>
 - <http://tondeo-shop.de>
 - <http://mv-personalberatung.de>
+
+### Luisa Zeltner
+*Wordpress*
+- <http://luisazeltner.de>
+
+### Fabian Kampa
+*Kirby*
+- <http://fabiankampa.de>
