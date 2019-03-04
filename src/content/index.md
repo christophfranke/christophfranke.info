@@ -5,7 +5,18 @@
 *Javascript, Vue, React, Node*
 ### <a class="liame">...</a>
 
-## Projects:
+## Education
+
+- Diploma in Mathematics and Informatics (2014)
+
+## Previous employers
+- Cologne University
+- Fraunhofer SCAI
+- Nvidia Coorp
+- The Good Evil GmbH
+- RaguseScheer GmbH
+
+## Online Projects:
 
 ### Otto Group / SuperReal
 *Vue, Vuex, ES6, Sass, JSP, Gulp, Webpack*
