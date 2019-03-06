@@ -1,7 +1,7 @@
 # Christoph Franke
 
 
-### Freelance Web Developer
+### Fullstack Web Developer
 *Javascript, Vue, React, Node*
 ### <a class="liame">...</a>
 
