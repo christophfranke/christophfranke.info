@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/christophfranke/christophfranke.info#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
+    "dotenv-webpack": "^1.7.0",
     "next": "^8.0.3",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   }
