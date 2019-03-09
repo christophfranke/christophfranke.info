@@ -3,21 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^4.0.0",
-    "gulp-connect": "^5.7.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "markdown-it": "^8.4.2",
-    "markdown-it-link-attributes": "^2.1.0",
-    "node-sass": "^4.11.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp",
-    "build": "gulp build"
+    "dev": "next",
+    "build": "next build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christophfranke/christophfranke.info.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christophfranke/christophfranke.info/issues"
+  },
+  "homepage": "https://github.com/christophfranke/christophfranke.info#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
 }
