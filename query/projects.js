@@ -1,9 +1,7 @@
 import Prismic from 'prismic-javascript'
+import API from './api'
 
-const endpoint = 'https://christophfranke-info.cdn.prismic.io/api/v2'
-const accessToken = process.env.PRISMIC_ACCESS_TOKEN
-
-export default () => Prismic.getApi(endpoint, { accessToken }).then(api =>
+export default () => API().then(api =>
 	api.query(Prismic.Predicates.at('document.type', 'project'),
 		{ orderings : '[my.project.priority desc]' })).then(response =>
 	response.results)

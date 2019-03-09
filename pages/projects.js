@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import Layout from '../components/layout'
-import Email from '../components/email'
 
 import QueryProjects from '../query/projects'
 import { asText } from '../util/prismic'
