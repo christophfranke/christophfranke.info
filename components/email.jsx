@@ -1,7 +1,18 @@
+import { css, StyleSheet } from 'aphrodite'
+
 const address = 'hallo@christophfranke.info'
-const Email = () => {
+
+const styles = StyleSheet.create({
+	email: {
+		color: 'white',
+		display: 'block'
+	}
+})
+
+const Email = props => {
+	const { className, ...rest } = props
 	return (
-		<a href={`mailto:${address}`}>{address}</a>
+		<a className={[css(styles.email), className].join(' ')} href={`mailto:${address}`} {...rest}>{address}</a>
 	)
 }
 

@@ -1,9 +1,12 @@
 import Link from 'next/link'
-
+import Style from './layout.css'
 
 const Layout = props => {
 	return (
-		<div>
+		<div style={Style.body}>
+			<style>{`body {
+				margin: 0;
+			}`}</style>
 			<Link href="/">
 				<a>Home</a>
 			</Link>
