@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		minHeight: '100%',
+		height: 'calc(100vh - 60px)',
 	},
 	inner: {
 		// padding: '4vw',

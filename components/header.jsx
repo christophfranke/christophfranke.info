@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { css, StyleSheet } from 'aphrodite'
+import '../util/rehydrate'
 
 import style from '../style'
 
@@ -10,7 +11,8 @@ const styles = StyleSheet.create({
 		right: 0,
 		display: 'flex',
 		paddingRight: '2vw',
-		width: '400px',
+		width: '90vw',
+		maxWidth: '450px',
 		margin: '0 auto',
 		flexAlign: 'center',
 		justifyContent: 'space-between',
