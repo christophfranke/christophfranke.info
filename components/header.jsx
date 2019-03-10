@@ -4,17 +4,20 @@ import { css, StyleSheet } from 'aphrodite'
 const styles = StyleSheet.create({
 	header: {
 		position: 'fixed',
-		top: 0,
+		top: '15px',
+		right: 0,
 		display: 'flex',
-		padding: '8px 10%',
-		width: '80%',
+		paddingRight: '10vw',
+		width: '300px',
 		margin: '0 auto',
 		flexAlign: 'center',
 		justifyContent: 'space-between',
+		borderBottom: '1px solid white',
 	},
 	a: {
 		color: 'white',
-		display: 'block'
+		display: 'block',
+		textDecoration: 'none'
 	}
 })
 
