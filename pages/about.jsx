@@ -19,10 +19,9 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		margin: '150px auto',
 		width: '70%',
-  //   backgroundColor: 'rgba(40, 76, 43, 0.1)',
-		// backgroundColor: 'rgba(51, 92, 119, 0.2)',
     padding: '8vw',
     // borderRadius: '6px',
+    backgroundColor: style.background.transparent,
     borderTop: style.border,
     borderBottom: style.border
 	},
