@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-export default props => {
+const Layout = props => {
 	return (
 		<div>
 			<Link href="/">
@@ -13,7 +13,12 @@ export default props => {
 			<Link href="/skills">
 				<a>Skills</a>
 			</Link>
+			<Link href="/about">
+				<a>About</a>
+			</Link>
 			{props.children}
 		</div>
 	)
 }
+
+export default Layout

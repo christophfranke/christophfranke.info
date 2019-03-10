@@ -4,7 +4,7 @@ import { asText, url } from '../util/prismic'
 import RichText from '../components/richText'
 
 
-const Project = props => {
+const ProjectPage = props => {
 	console.log(props)
 	const links = [
 		props.data.project_url.url ? <a href={url(props.data.project_url)} target="_blank" key="project_url">View Project</a> : null,
@@ -27,6 +27,6 @@ const Project = props => {
 	)
 }
 
-Project.getInitialProps = async context => await QueryProject(context.query.id)
+ProjectPage.getInitialProps = async context => await QueryProject(context.query.id)
 
-export default Project
+export default ProjectPage

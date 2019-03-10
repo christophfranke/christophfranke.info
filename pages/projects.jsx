@@ -15,7 +15,7 @@ const SingleProject = props => {
 	)
 }
 
-const Projects = props => {
+const ProjectsPage = props => {
 	return (
 		<Layout>
 			<ul>
@@ -25,8 +25,8 @@ const Projects = props => {
 	)
 }
 
-Projects.getInitialProps = async () => ({
+ProjectsPage.getInitialProps = async () => ({
 	projects: await QueryProjects()
 })
 
-export default Projects
+export default ProjectsPage

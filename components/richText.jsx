@@ -1,7 +1,9 @@
 import { asHtml } from '../util/prismic'
 
-export default props => {
+const RichText = props => {
 	return (
 		<div dangerouslySetInnerHTML={{__html: asHtml(props.content)}} />
 	)
 }
+
+export default RichText

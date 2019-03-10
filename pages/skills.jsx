@@ -17,18 +17,17 @@ const List = props => (
 )
 
 
-const Page = props => {
+const SkillsPage = props => {
 	return (
 		<Layout>
-			<List title="Programming Languages" items={props.skills.data.languages} />
-			<List title="Frontend Frameworks & Libraries" items={props.skills.data.frontend_frameworks} />
-			<List title="Backend Frameworks & Libraries" items={props.skills.data.backend_frameworks} />
+			<List title="Frontend" items={props.skills.data.frontend_frameworks} />
+			<List title="Backend" items={props.skills.data.backend_frameworks} />
 		</Layout>
 	)
 }
 
-Page.getInitialProps = async () => ({
+SkillsPage.getInitialProps = async () => ({
 	skills: await QueryPage('skills')
 })
 
-export default Page
+export default SkillsPage
