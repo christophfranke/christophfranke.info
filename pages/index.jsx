@@ -4,11 +4,13 @@ import '../util/rehydrate'
 import Layout from '../components/layout'
 import Email from '../components/email'
 
+import style from '../style'
+
 const styles = StyleSheet.create({
 	name: {
 		fontSize: '70px',
 		margin: 0,
-		borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+		borderBottom: style.border,
 	},
 	description: {
 		fontSize: '34px',
@@ -28,6 +30,10 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		minHeight: '100%',
 	},
+	inner: {
+		// padding: '4vw',
+		// border: style.border,
+	},
 	email: {
 		marginTop: '15px',
 	}
@@ -37,7 +43,7 @@ const IndexPage = () => {
 	return (
 		<Layout>
 			<div className={css(styles.center)}>
-				<div>
+				<div className={css(styles.inner)}>
 					<h1 className={css(styles.name)}>Christoph Franke</h1>
 					<h2 className={css(styles.description)}>Fullstack Web Developer</h2>
 					<h3 className={css(styles.tech)}>Javascript, Vue, React, Node</h3>

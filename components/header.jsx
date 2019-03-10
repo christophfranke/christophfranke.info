@@ -1,20 +1,20 @@
 import Link from 'next/link'
 import { css, StyleSheet } from 'aphrodite'
 
-import Style from '../style'
+import style from '../style'
 
 const styles = StyleSheet.create({
 	header: {
 		position: 'fixed',
-		top: '15px',
+		top: '1.5vw',
 		right: 0,
 		display: 'flex',
-		paddingRight: '10vw',
-		width: '300px',
+		paddingRight: '2vw',
+		width: '400px',
 		margin: '0 auto',
 		flexAlign: 'center',
 		justifyContent: 'space-between',
-		borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+		borderBottom: style.border,
 	},
 	a: {
 		color: 'white',
@@ -22,8 +22,19 @@ const styles = StyleSheet.create({
 		textDecoration: 'none',
 		fontSize: '20px',
 		':hover': {
-			color: Style.color.blue
+			color: style.color.blue
+		},
+	},
+	logo: {
+		height: '24px',
+		width: 'auto',
+		transition: 'transform .3s',
+		':hover': {
+			transform: 'scale(1.2)'
 		}
+	},
+	logoSpacer: {
+		marginLeft: '4vw'
 	}
 })
 
@@ -42,6 +53,12 @@ const Header = props => {
 			<Link href="/about">
 				<a className={css(styles.a)}>About</a>
 			</Link>
+			<a className={css(styles.logoSpacer)} href="https://github.com/christophfranke" target="_blank">
+				<img className={css(styles.logo)} src="/static/github.png" />
+			</a>
+			<a href="https://www.linkedin.com/in/christoph-franke-44095673/" target="_blank">
+				<img className={css(styles.logo)} src="/static/linkedin.png" />
+			</a>
 		</header>
 	)
 }

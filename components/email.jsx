@@ -6,10 +6,11 @@ import style from '../style'
 const styles = StyleSheet.create({
 	email: {
 		color: 'white',
-		display: 'block',
+		display: 'inline-block',
 		fontSize: '24px',
+		textDecoration: 'none',
 		':hover': {
-			color: style.color.red
+			color: style.color.red,
 		}
 	}
 })
