@@ -17,8 +17,13 @@ const styles = StyleSheet.create({
 	row: {
 		display: 'flex',
 		justifyContent: 'space-between',
-		margin: '110px auto',
-		width: '80%'
+		margin: '150px auto',
+		width: '70%',
+    backgroundColor: 'rgba(40, 76, 43, 0.1)',
+		backgroundColor: 'rgba(51, 92, 119, 0.2)',
+    padding: '8vw',
+    borderRadius: '6px',
+    border: style.border
 	},
 	headline: {
 		marginTop: 0,

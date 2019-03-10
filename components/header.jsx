@@ -16,7 +16,12 @@ const styles = StyleSheet.create({
 		margin: '0 auto',
 		flexAlign: 'center',
 		justifyContent: 'space-between',
+		border: '1px solid transparent',
 		borderBottom: style.border,
+		// border: style.border,
+		// padding: '0.7vw 2vw',
+		// borderRadius: '6px 0 0 6px',
+		// backgroundColor: 'rgba(51, 92, 119, 0.2)',
 	},
 	a: {
 		color: 'white',
