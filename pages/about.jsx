@@ -35,6 +35,9 @@ const styles = StyleSheet.create({
 	},
 	right: {
 		width: '32%',
+	},
+	image: {
+		borderRadius: '6px',
 	}
 })
 
@@ -47,7 +50,7 @@ const AboutPage = props => {
 					<RichText content={props.about.data.text} />
 				</div>
 				<div className={css(styles.right)}>
-					<Image image={props.about.data.portrait} />
+					<Image className={css(styles.image)} image={props.about.data.portrait} />
 				</div>
 			</div>
 		</Layout>

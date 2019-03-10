@@ -5,17 +5,16 @@ const styles = StyleSheet.create({
 	picture: {
 		width: '100%',
 		height: 'auto',
-		borderRadius: '6px',
 	}
 })
 
-const Image = ({ image }) => {
+const Image = ({ image, className = '' }) => {
 	return (
     <picture>
       <source media="(max-width: 400px)" srcSet={image.small.url} />
       <source media="(max-width: 900px)" srcSet={image.medium.url} />
       <source srcSet={image.url} />
-      <img className={css(styles.picture)} src={image.url} alt={image.alt} />
+      <img className={[css(styles.picture), className].join(' ')} src={image.url} alt={image.alt} />
     </picture>
 	)
 }
