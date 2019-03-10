@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { css, StyleSheet } from 'aphrodite'
 
+import Style from '../style'
+
 const styles = StyleSheet.create({
 	header: {
 		position: 'fixed',
@@ -12,12 +14,16 @@ const styles = StyleSheet.create({
 		margin: '0 auto',
 		flexAlign: 'center',
 		justifyContent: 'space-between',
-		borderBottom: '1px solid white',
+		borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
 	},
 	a: {
 		color: 'white',
 		display: 'block',
-		textDecoration: 'none'
+		textDecoration: 'none',
+		fontSize: '20px',
+		':hover': {
+			color: Style.color.blue
+		}
 	}
 })
 

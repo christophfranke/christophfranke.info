@@ -1,17 +1,19 @@
 import { css, StyleSheet } from 'aphrodite'
+import '../util/rehydrate'
 
 import Layout from '../components/layout'
 import Email from '../components/email'
 
 const styles = StyleSheet.create({
 	name: {
-		fontSize: '50px',
-		margin: 0
+		fontSize: '70px',
+		margin: 0,
+		borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
 	},
 	description: {
-		fontSize: '20px',
+		fontSize: '34px',
 		margin: 0,
-		marginTop: '10px',
+		marginTop: '25px',
 		fontWeight: 'normal'
 	},
 	tech: {
@@ -37,7 +39,6 @@ const IndexPage = () => {
 			<div className={css(styles.center)}>
 				<div>
 					<h1 className={css(styles.name)}>Christoph Franke</h1>
-					<hr />
 					<h2 className={css(styles.description)}>Fullstack Web Developer</h2>
 					<h3 className={css(styles.tech)}>Javascript, Vue, React, Node</h3>
 					<Email className={css(styles.email)} />

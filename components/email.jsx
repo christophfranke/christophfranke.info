@@ -5,7 +5,8 @@ const address = 'hallo@christophfranke.info'
 const styles = StyleSheet.create({
 	email: {
 		color: 'white',
-		display: 'block'
+		display: 'block',
+		fontSize: '24px'
 	}
 })
 
