@@ -1,24 +1,22 @@
-import Link from 'next/link'
-import Style from './layout.css'
+import { css, StyleSheet } from 'aphrodite'
+import Header from './header'
+const styles = StyleSheet.create({	
+	body: {
+		background: '#1d1d1d',
+		color: 'white',
+		height: '100vh',
+		fontFamily: '"Helvetica Neue", Helvetica, Sans serif',
+		padding: "30px 10px"
+	}
+})
 
 const Layout = props => {
 	return (
-		<div style={Style.body}>
+		<div className={css(styles.body)}>
+			<Header />
 			<style>{`body {
 				margin: 0;
 			}`}</style>
-			<Link href="/">
-				<a>Home</a>
-			</Link>
-			<Link href="/projects">
-				<a>Projects</a>
-			</Link>
-			<Link href="/skills">
-				<a>Skills</a>
-			</Link>
-			<Link href="/about">
-				<a>About</a>
-			</Link>
 			{props.children}
 		</div>
 	)
