@@ -5,7 +5,7 @@ import RichText from '../components/richText'
 
 
 const ProjectPage = props => {
-	console.log(props)
+	// console.log(props)
 	const links = [
 		props.data.project_url.url ? <a href={url(props.data.project_url)} target="_blank" key="project_url">View Project</a> : null,
 		props.data.repository.url ? <a href={url(props.data.repository)} target="_blank" key="repository">View Repository</a> : null,
