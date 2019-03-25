@@ -26,14 +26,18 @@ const styles = StyleSheet.create({
 	block: {
 		marginBottom: '50px',
 	},
+	links: {
+		marginTop: '70px',
+		textAlign: 'center'
+	},
 	list: {
-		padding: '0'
+		paddingLeft: '20px'
 	},
 	listItem: {
-		display: 'block',
 		fontWeight: '300',
 		fontSize: '20px',
-		lineHeight: '30px',
+		lineHeight: '24px',
+		marginBottom: '15px',
 	}
 })
 
@@ -42,14 +46,17 @@ const ProjectPage = props => {
 	console.log(props)
 
 	const links = [
-		props.data.project_url.url ? <Button href={url(props.data.project_url)} key="project_url">View Project</Button> : null,
-		props.data.repository.url ? <Button href={url(props.data.repository)} key="repository">View Repository</Button> : null,
+		props.data.project_url.url ? <Button href={url(props.data.project_url)} target="_blank" key="project_url">View Project</Button> : null,
+		props.data.repository.url ? <Button href={url(props.data.repository)} target="_blank" key="repository">View Repository</Button> : null,
 	].filter(x => !!x)
 	return (
 		<Layout>
 			<div className={css(styles.row)}>
 				<div className={css(styles.col)}>
 					<Image image={props.data.image} />
+					<div className={css(styles.links)}>
+						{links}
+					</div>
 				</div>
 				<div className={css(styles.col)}>
 					<div className={css(styles.block)}>
@@ -67,9 +74,6 @@ const ProjectPage = props => {
 								<li className={css(styles.listItem)} key={i}>{asText(feature.feature)}</li>
 							)}
 						</ul>
-					</div>
-					<div className={css(styles.block)}>
-						{links}
 					</div>
 				</div>
 			</div>

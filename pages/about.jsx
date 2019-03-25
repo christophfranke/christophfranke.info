@@ -10,6 +10,8 @@ import style from '../style'
 import Layout from '../components/layout'
 import RichText from '../components/richText'
 import Image from '../components/image'
+import Button from '../components/button'
+import EmailButton from '../components/emailButton'
 
 
 
@@ -17,9 +19,9 @@ const styles = StyleSheet.create({
 	row: {
 		display: 'flex',
 		justifyContent: 'space-between',
-		margin: '150px auto',
+		margin: '150px auto 0 auto',
 		width: '70%',
-    padding: '8vw',
+    padding: '8vw 8vw 0 8vw',
 	},
 	headline: {
 		marginTop: 0,
@@ -35,6 +37,10 @@ const styles = StyleSheet.create({
 	image: {
 		borderRadius: '6px',
 		marginBottom: '1em',
+	},
+	ctas: {
+		margin: '0 auto 100px auto',
+		width: '70%',
 	}
 })
 
@@ -49,6 +55,13 @@ const AboutPage = props => {
 				<div className={css(styles.right)}>
 					<Image className={css(styles.image)} image={props.about.data.portrait} />
 				</div>
+			</div>
+			<div className={css(styles.ctas)}>
+				<Link href="/projects" prefetch>
+					<Button>View Projects</Button>
+				</Link>
+				<Button href="/static/Christoph%20Franke%20CV.pdf" className={css(styles.a)} download>Download CV</Button>
+				<EmailButton />
 			</div>
 		</Layout>
 	)

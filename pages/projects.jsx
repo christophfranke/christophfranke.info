@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 		transform: 'none'
 	},
 	overlay: {
-		backgroundColor: 'rgba(255, 255, 255, 0.7)',
+		backgroundColor: 'rgba(255, 255, 255, 0.8)',
 		position: 'absolute',
 		bottom: '0',
 		left: '0',

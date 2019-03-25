@@ -48,19 +48,19 @@ const styles = StyleSheet.create({
 const Header = props => {
 	return (
 		<header className={css(styles.header)}>
-			<Link href="/">
+			<Link href="/" prefetch>
 				<a className={css(styles.a)}>Home</a>
 			</Link>
-			<Link href="/projects">
+			<Link href="/projects" prefetch>
 				<a className={css(styles.a)}>Projects</a>
 			</Link>
-			<Link href="/skills">
+			<Link href="/skills" prefetch>
 				<a className={css(styles.a)}>Skills</a>
 			</Link>
-			<Link href="/about">
+			<Link href="/about" prefetch>
 				<a className={css(styles.a)}>About</a>
 			</Link>
-			<a href="/static/Christoph%20Franke%20CV.pdf" className={css(styles.a)} download>CV</a>
+			<a href="/static/Christoph%20Franke%20CV.pdf" className={css(styles.a)} target="_blank">CV</a>
 			<a className={css(styles.logoSpacer)} href="https://github.com/christophfranke" target="_blank">
 				<img className={css(styles.logo)} src="/static/github.png" />
 			</a>

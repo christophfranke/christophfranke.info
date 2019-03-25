@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
 		borderRadius: '6px',
 		textDecoration: 'none',
 		marginRight: '15px',
+		cursor: 'pointer',
 		':hover': {
 			color: style.color.blue,
 		}
@@ -20,7 +21,8 @@ const styles = StyleSheet.create({
 })
 
 const Button = props => {
-	return <a href={props.href} target="_blank" className={css(styles.button)}>{props.children}</a>
+	const className = [css(styles.button), props.className].filter(x => !!x).join(' ')
+	return <a {...props} className={className}>{props.children}</a>
 }
 
 export default Button

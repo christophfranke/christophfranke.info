@@ -29,11 +29,11 @@ const rotate = str => {
 	}).join('')
 }
 
-const prefix = () => {
+export const prefix = () => {
 	return rotate('pdlowr')
 }
 
-const address = () => {
+export const address = () => {
 	return rotate('kdoor' + '@' + 'fkulvwrskiudqnh' + '.' + 'lqir')
 }
 
