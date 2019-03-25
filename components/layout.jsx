@@ -10,6 +10,7 @@ body {
 
 p {
 	font-size: 18px;
+	line-height: 24px;
 	font-weight: 300;
 }
 `

@@ -20,10 +20,6 @@ const styles = StyleSheet.create({
 		margin: '150px auto',
 		width: '70%',
     padding: '8vw',
-    // borderRadius: '6px',
-    backgroundColor: style.background.transparent,
-    borderTop: style.border,
-    borderBottom: style.border
 	},
 	headline: {
 		marginTop: 0,
@@ -38,6 +34,7 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		borderRadius: '6px',
+		marginBottom: '1em',
 	}
 })
 

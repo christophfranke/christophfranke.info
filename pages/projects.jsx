@@ -30,26 +30,88 @@ const styles = StyleSheet.create({
 			filter: 'grayscale(0)',
 			opacity: 1
 		}
+	},
+	container: {
+		position: 'relative',
+    overflow: 'hidden'
+	},
+	overlayHover: {
+		transform: 'none'
+	},
+	overlay: {
+		backgroundColor: 'rgba(255, 255, 255, 0.7)',
+		position: 'absolute',
+		bottom: '0',
+		left: '0',
+		right: '0',
+		height: '6vw',
+		// padding: '0 30px 0 0',
+		transform: 'translateY(6vw)',
+		transition: '.3s transform ease-in-out',
+	},
+	title: {
+		textAlign: 'center',
+		fontSize: '30px',
+		textTransform: 'uppercase',
+		// marginTop: '3vw',
+		margin: '0',
+		lineHeight: '6vw',
+		color: 'black',
+		fontWeight: '300',
 	}
 })
 
-const SingleProject = props => {
-	return (
-		<Link key={props.id} as={`/p/${props.uid}`} href={`/project?id=${props.uid}`}>
-			<a className={css(styles.col)}>
-				<div>
-					<Image className={css(styles.image)} image={props.data.image} />
-				</div>
-			</a>
-		</Link>
-	)
+class SingleProject extends React.Component {
+	constructor(props) {
+		super(props)
+		console.log(props.project)
+
+		this.mouseEnter = this.mouseEnter.bind(this)
+		this.mouseLeave = this.mouseLeave.bind(this)
+
+		this.state = {
+			hover: false
+		}
+	}
+
+	mouseEnter() {
+		this.setState({
+			hover: true
+		})
+	}
+
+	mouseLeave() {
+		this.setState({
+			hover: false
+		})
+	}
+
+	render() {
+		return (
+			<Link key={this.props.project.id} as={`/p/${this.props.project.uid}`} href={`/project?id=${this.props.project.uid}`}>
+				<a className={css(styles.col)}>
+					<div
+						className={css(styles.container)}
+						onMouseEnter={this.mouseEnter}
+						onMouseLeave={this.mouseLeave}>
+						<Image className={css(styles.image)} image={this.props.project.data.image} />
+						<div className={css(styles.overlay, this.state.hover ? styles.overlayHover : null)}>
+							<h2 className={css(styles.title)}>{asText(this.props.project.data.title)}</h2>
+						</div>
+					</div>
+				</a>
+			</Link>
+		)
+	}
 }
+
 
 const ProjectsPage = props => {
 	return (
 		<Layout>
 			<div className={css(styles.row)}>
-				{props.projects.filter(project => project.data.image.url).map(project => SingleProject(project))}
+				{props.projects.filter(project => project.data.image.url).map((project, i) =>
+					(<SingleProject project={project} key={i} />))}
 			</div>
 		</Layout>
 	)
