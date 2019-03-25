@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "christophfranke-info",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [{ "src": "/p/(?<id>[^/]+)$", "dest": "/project?id=$id" }]
 }
