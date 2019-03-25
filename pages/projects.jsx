@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
 class SingleProject extends React.Component {
 	constructor(props) {
 		super(props)
-		console.log(props.project)
 
 		this.mouseEnter = this.mouseEnter.bind(this)
 		this.mouseLeave = this.mouseLeave.bind(this)

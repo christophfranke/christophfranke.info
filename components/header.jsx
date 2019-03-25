@@ -60,6 +60,7 @@ const Header = props => {
 			<Link href="/about">
 				<a className={css(styles.a)}>About</a>
 			</Link>
+			<a href="/static/Christoph%20Franke%20CV.pdf" className={css(styles.a)} download>CV</a>
 			<a className={css(styles.logoSpacer)} href="https://github.com/christophfranke" target="_blank">
 				<img className={css(styles.logo)} src="/static/github.png" />
 			</a>
