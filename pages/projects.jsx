@@ -87,7 +87,7 @@ class SingleProject extends React.Component {
 
 	render() {
 		return (
-			<Link key={this.props.project.id} as={`/p/${this.props.project.uid}`} href={`/project?id=${this.props.project.uid}`}>
+			<Link key={this.props.project.id} as={`/p/${this.props.project.uid}`} href={`/project?id=${this.props.project.uid}`} prefetch>
 				<a className={css(styles.col)}>
 					<div
 						className={css(styles.container)}
