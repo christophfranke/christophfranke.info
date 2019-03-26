@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
 		borderRadius: '6px',
 		textDecoration: 'none',
 		marginRight: '15px',
+		marginBottom: '15px',
 		cursor: 'pointer',
 		':hover': {
 			color: style.color.blue,

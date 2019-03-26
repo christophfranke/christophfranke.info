@@ -22,6 +22,10 @@ const styles = StyleSheet.create({
 		margin: '150px auto 0 auto',
 		width: '70%',
     padding: '8vw 8vw 0 8vw',
+    '@media (max-width: 800px)': {
+	    padding: '4vw 4vw 0 4vw',
+	    width: '90%'
+    }
 	},
 	headline: {
 		marginTop: 0,
@@ -30,9 +34,15 @@ const styles = StyleSheet.create({
 	},
 	left: {
 		width: '60%',
+		'@media (max-width: 1000px)': {
+			width: '100%'
+		}
 	},
 	right: {
 		width: '32%',
+		'@media (max-width: 1000px)': {
+			display: 'none'
+		}
 	},
 	image: {
 		borderRadius: '6px',
@@ -41,6 +51,19 @@ const styles = StyleSheet.create({
 	ctas: {
 		margin: '0 auto 100px auto',
 		width: '70%',
+    '@media (max-width: 800px)': {
+			width: '90%',
+    }
+	},
+	imageInline: {
+		display: 'none',
+		'@media (max-width: 1000px)': {
+			display: 'inline-block',
+			float: 'right',
+			width: '40%',
+			marginLeft: '2vw',
+			marginBottom: '1vw',
+		}
 	}
 })
 
@@ -49,6 +72,7 @@ const AboutPage = props => {
 		<Layout>
 			<div className={css(styles.row)}>
 				<div className={css(styles.left)}>
+					<Image className={css(styles.imageInline)} image={props.about.data.portrait} />
 					<h1 className={css(styles.headline)}>About me</h1>
 					<RichText content={props.about.data.text} />
 				</div>
@@ -60,7 +84,7 @@ const AboutPage = props => {
 				<Link href="/projects" prefetch>
 					<Button>View Projects</Button>
 				</Link>
-				<Button href="/static/Christoph%20Franke%20CV.pdf" className={css(styles.a)} download>Download CV</Button>
+				<Button href="/static/Christoph%20Franke%20CV.pdf" download>Download CV</Button>
 				<EmailButton />
 			</div>
 		</Layout>
