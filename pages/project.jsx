@@ -15,16 +15,25 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		width: '90vw',
 		flexWrap: 'wrap',
+		flexDirection: 'row-reverse'
 	},
 	col: {
 		width: '43vw',
-		marginBottom: '3vw'
+		marginBottom: '3vw',
+		'@media (max-width: 600px)': {
+			width: '90vw',
+		}
 	},
 	title: {
 		marginTop: '0'
 	},
 	block: {
 		marginBottom: '50px',
+	},
+	featureBlock: {
+		'@media (max-width: 1000px)': {
+			display: 'none'
+		}
 	},
 	links: {
 		marginTop: '70px',
@@ -38,6 +47,12 @@ const styles = StyleSheet.create({
 		fontSize: '20px',
 		lineHeight: '24px',
 		marginBottom: '15px',
+	},
+	featuresMobile: {
+		display: 'none',
+		'@media (max-width: 1000px)': {
+			display: 'block'
+		}
 	}
 })
 
@@ -51,12 +66,6 @@ const ProjectPage = props => {
 		<Layout>
 			<div className={css(styles.row)}>
 				<div className={css(styles.col)}>
-					<Image image={props.data.image} />
-					<div className={css(styles.links)}>
-						{links}
-					</div>
-				</div>
-				<div className={css(styles.col)}>
 					<div className={css(styles.block)}>
 						<h1 className={css(styles.title)}>{asText(props.data.title)}</h1>
 						<RichText content={props.data.description} />
@@ -65,7 +74,7 @@ const ProjectPage = props => {
 						<p><b>{asText(props.data.role)}</b></p>
 						<p><em>{props.data.techstack.map(item => asText(item.item)).join(', ')}</em></p>
 					</div>
-					<div className={css(styles.block)}>
+					<div className={css([styles.block, styles.featureBlock])}>
 						<h2>Features</h2>
 						<ul className={css(styles.list)}>
 							{props.data.features.map((feature, i) =>
@@ -73,6 +82,20 @@ const ProjectPage = props => {
 							)}
 						</ul>
 					</div>
+				</div>
+				<div className={css(styles.col)}>
+					<Image image={props.data.image} />
+					<div className={css(styles.links)}>
+						{links}
+					</div>
+				</div>
+				<div className={css(styles.featuresMobile)}>
+					<h2>Features</h2>
+					<ul className={css(styles.list)}>
+						{props.data.features.map((feature, i) =>
+							<li className={css(styles.listItem)} key={i}>{asText(feature.feature)}</li>
+						)}
+					</ul>
 				</div>
 			</div>
 		</Layout>
