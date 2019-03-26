@@ -18,7 +18,7 @@ const queryProjects = async () => {
 }
 
 const key = project => `/p/${project.uid}`
-const page = project => ({ page: `/project?id=${project.uid}`})
+const page = project => ({ page: '/project', query: { id: `${project.uid}` } })
 
 const test = async () => {
   const projects = await queryProjects()
@@ -53,5 +53,5 @@ module.exports = {
         .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {})
     }
   },
-  target: 'serverless'
+  // target: 'serverless'
 }

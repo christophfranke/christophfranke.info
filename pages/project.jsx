@@ -43,8 +43,6 @@ const styles = StyleSheet.create({
 
 
 const ProjectPage = props => {
-	console.log(props)
-
 	const links = [
 		props.data.project_url.url ? <Button href={url(props.data.project_url)} target="_blank" key="project_url">View Project</Button> : null,
 		props.data.repository.url ? <Button href={url(props.data.repository)} target="_blank" key="repository">View Repository</Button> : null,
