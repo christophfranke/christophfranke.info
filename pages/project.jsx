@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
 	featuresMobile: {
 		display: 'none',
 		'@media (max-width: 1000px)': {
-			display: 'block'
+			display: 'block',
+			width: '90vw'
 		}
 	}
 })
