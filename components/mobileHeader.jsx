@@ -83,11 +83,7 @@ class MobileHeader extends React.Component {
 		})
 	}
 
-	render() {	
-		const icon = this.state.open ?
-			(<img src="/static/close.svg" className={css(styles.icon)} width="32" height="32" onClick={this.close} />):
-			(<img src="/static/menu.svg" className={css(styles.icon)} width="32" height="32" onClick={this.open} />)
-
+	render() {
 		const menu = (<div className={css(styles.menu)}>
 			<img src="/static/close.svg" className={css(styles.icon)} width="32" height="32" onClick={this.close} />
 			<hr className={css(styles.line)} />
@@ -116,7 +112,7 @@ class MobileHeader extends React.Component {
 
 		return (
 			<header className={[css(styles.header), this.props.className].filter(x => !!x).join(' ')}>
-				{!this.state.open ? <img src="/static/menu-1.svg" className={css(styles.icon)} width="32" height="32" onClick={this.open} /> : null}
+				{!this.state.open ? <img src="/static/menu.svg" className={css(styles.icon)} width="32" height="32" onClick={this.open} /> : null}
 				{this.state.open ? menu : null}	
 			</header>
 		)
