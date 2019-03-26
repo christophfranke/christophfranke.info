@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { css, StyleSheet } from 'aphrodite'
+import { css, StyleSheet } from 'aphrodite/no-important'
 import '../util/rehydrate'
 
 import QueryProjects from '../query/projects'
@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		display: 'block',
-		filter: 'grayscale(100%)',
+		// filter: 'grayscale(100%)',
 		transition: 'filter .3s, opacity 0.3s',
 		borderRadius: '6px',
-		opacity: 0.6,
+		opacity: 0.5,
 		':hover': {
 			filter: 'grayscale(0)',
 			opacity: 1

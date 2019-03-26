@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { css, StyleSheet } from 'aphrodite'
+import { css, StyleSheet } from 'aphrodite/no-important'
 import '../util/rehydrate'
 
 import style from '../style'
 
 const styles = StyleSheet.create({
 	header: {
-		position: 'fixed',
+		position: 'absolute',
 		top: '1.5vw',
 		right: 0,
 		display: 'flex',

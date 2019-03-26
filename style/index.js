@@ -13,6 +13,7 @@ export default {
 	background: {
 		body: '#1d1d1d',
 		transparent: 'rgba(51, 92, 119, 0.1)',
+		menu: 'rgba(29, 29, 29, 0.95)'
   	// transparent: 'rgba(40, 76, 43, 0.1)',
 		// transparent: 'rgba(51, 92, 119, 0.1)',
 	}

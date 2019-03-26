@@ -1,4 +1,4 @@
-import { css, StyleSheet } from 'aphrodite'
+import { css, StyleSheet } from 'aphrodite/no-important'
 
 import QueryProject from '../query/project'
 import Layout from '../components/layout'

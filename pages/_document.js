@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { StyleSheetServer } from 'aphrodite'
+import { StyleSheetServer } from 'aphrodite/no-important'
 
 export default class MyDocument extends Document {
   static async getInitialProps ({ renderPage }) {

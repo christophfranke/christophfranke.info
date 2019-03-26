@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { css, StyleSheet } from 'aphrodite'
+import { css, StyleSheet } from 'aphrodite/no-important'
 import '../util/rehydrate'
 
 import QueryPage from '../query/page'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { css, StyleSheet } from 'aphrodite'
+import { css, StyleSheet } from 'aphrodite/no-important'
 
 import style from '../style'
 

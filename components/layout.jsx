@@ -1,4 +1,4 @@
-import { css, StyleSheet } from 'aphrodite'
+import { css, StyleSheet } from 'aphrodite/no-important'
 
 import Header from './header'
 import MobileHeader from './mobileHeader'
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 	},
 	header: {
 		'@media (max-width: 800px)': {
-			display: 'none'
+			display: 'none !important'
 		}
 	},
 	mobileHeader: {
