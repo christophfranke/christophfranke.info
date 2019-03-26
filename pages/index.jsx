@@ -11,18 +11,27 @@ const styles = StyleSheet.create({
 		fontSize: '70px',
 		margin: 0,
 		borderBottom: style.border,
+		'@media (max-width: 400px)': {
+			fontSize: '50px',
+		},
 	},
 	description: {
 		fontSize: '34px',
 		margin: 0,
 		marginTop: '25px',
-		fontWeight: 'normal'
+		fontWeight: 'normal',
+		'@media (max-width: 400px)': {
+			fontSize: '24px',
+		}
 	},
 	tech: {
 		fontSize: '20px',
 		margin: 0,
 		fontStyle: 'italic',
-		fontWeight: 'normal'
+		fontWeight: 'normal',
+		'@media (max-width: 400px)': {
+			fontSize: '16px',
+		}
 	},
 	center: {
 		display: 'flex',
@@ -31,11 +40,17 @@ const styles = StyleSheet.create({
 		height: 'calc(100vh - 60px)',
 	},
 	inner: {
+		'@media (max-width: 600px)': {
+			textAlign: 'center'
+		},
 		// padding: '4vw',
 		// border: style.border,
 	},
 	email: {
 		marginTop: '15px',
+		'@media (max-width: 400px)': {
+			fontSize: '20px',
+		}
 	}
 })
 
