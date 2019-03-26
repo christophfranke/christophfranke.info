@@ -1,6 +1,7 @@
 import { css, StyleSheet } from 'aphrodite'
 
 import Header from './header'
+import MobileHeader from './mobileHeader'
 import style from '../style'
 
 const reset = `
@@ -17,18 +18,30 @@ p {
 
 const styles = StyleSheet.create({	
 	body: {
-		background: '#1d1d1d',
-		color: 'white',
+		background: style.background.body,
+		color: style.color.white,
 		minHeight: 'calc(100vh - 60px)',
 		fontFamily: style.font.primary,
 		padding: "30px 10px"
+	},
+	header: {
+		'@media (max-width: 800px)': {
+			display: 'none'
+		}
+	},
+	mobileHeader: {
+		display: 'none',
+		'@media (max-width: 800px)': {
+			display: 'block'
+		}
 	}
 })
 
 const Layout = props => {
 	return (
 		<div className={css(styles.body)}>
-			<Header />
+			<Header className={css(styles.header)} />
+			<MobileHeader className={css(styles.mobileHeader)} />
 			<style>{reset}</style>
 			{props.children}
 		</div>

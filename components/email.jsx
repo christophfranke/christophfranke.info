@@ -5,7 +5,7 @@ import style from '../style'
 
 const styles = StyleSheet.create({
 	email: {
-		color: 'white',
+		color: style.color.white,
 		display: 'inline-block',
 		fontSize: '24px',
 		textDecoration: 'none',

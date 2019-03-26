@@ -5,7 +5,7 @@ import style from '../style'
 
 const styles = StyleSheet.create({
 	button: {
-		color: 'white',
+		color: style.color.white,
 		display: 'inline-block',
 		padding: '9px',
 		border: style.border,

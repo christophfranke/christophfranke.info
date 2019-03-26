@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
 	}
 })
 
-const Header = props => {
+const MobileHeader = props => {
 	return (
 		<header className={[css(styles.header), props.className].filter(x => !!x).join(' ')}>
 			<Link href="/" prefetch>
@@ -71,4 +71,4 @@ const Header = props => {
 	)
 }
 
-export default Header
+export default MobileHeader
