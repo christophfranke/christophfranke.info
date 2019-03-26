@@ -18,7 +18,10 @@ const styles = StyleSheet.create({
 	},
 	col: {
 		width: '43vw',
-		marginBottom: '3vw'
+		marginBottom: '3vw',
+		'@media (max-width: 800px)': {
+			width: '90vw'
+		}
 	},
 	image: {
 		display: 'block',

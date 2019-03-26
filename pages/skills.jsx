@@ -26,7 +26,13 @@ const styles = StyleSheet.create({
 		border: style.border,
 		borderRadius: '6px',
 		marginBottom: '3vw',
-		backgroundColor: style.background.transparent
+		backgroundColor: style.background.transparent,
+		'@media (max-width: 800px)': {
+			width: '90vw'
+		},
+		'@media (max-width: 400px)': {
+			textAlign: 'left'
+		}
 	}
 })
 
