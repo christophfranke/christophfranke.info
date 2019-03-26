@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
 	},
 	left: {
 		width: '60%',
-		'@media (max-width: 1000px)': {
+		'@media (max-width: 1100px)': {
 			width: '100%'
 		}
 	},
 	right: {
 		width: '32%',
-		'@media (max-width: 1000px)': {
+		'@media (max-width: 1100px)': {
 			display: 'none'
 		}
 	},
@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
 	},
 	imageInline: {
 		display: 'none',
-		'@media (max-width: 1000px)': {
+		'@media (max-width: 1100px)': {
 			display: 'inline-block',
 			float: 'right',
-			width: '40%',
+			maxWidth: '40%',
 			marginLeft: '2vw',
 			marginBottom: '1vw',
 		}
