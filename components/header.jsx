@@ -18,10 +18,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 		border: '1px solid transparent',
 		borderBottom: style.border,
-		// border: style.border,
-		// padding: '0.7vw 2vw',
-		// borderRadius: '6px 0 0 6px',
-		// backgroundColor: 'rgba(51, 92, 119, 0.2)',
 	},
 	a: {
 		color: style.color.white,
@@ -60,7 +56,7 @@ const Header = props => {
 			<Link href="/about" prefetch>
 				<a className={css(styles.a)}>About</a>
 			</Link>
-			<a href="/static/Christoph%20Franke%20CV%20and%20Projects.zip" className={css(styles.a)}>CV</a>
+			<a href="/static/Christoph%20Franke%20CV%20and%20Projects.zip" className={css(styles.a)} download>CV</a>
 			<a className={css(styles.logoSpacer)} href="https://github.com/christophfranke" target="_blank">
 				<img className={css(styles.logo)} src="/static/github.png" />
 			</a>

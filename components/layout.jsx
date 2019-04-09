@@ -1,8 +1,11 @@
 import { css, StyleSheet } from 'aphrodite/no-important'
+import Router from 'next/router'
 
+import Tracking from '../util/tracking'
 import Header from './header'
 import MobileHeader from './mobileHeader'
 import style from '../style'
+
 
 const reset = `
 body {
@@ -15,6 +18,15 @@ p {
 	font-weight: 300;
 }
 `
+
+if (process.browser) {
+		const handleRouteChange = url => {
+		  Tracking.view(url)
+		}
+
+	Router.events.on('routeChangeStart', handleRouteChange)
+}
+
 
 const styles = StyleSheet.create({	
 	body: {
@@ -47,5 +59,6 @@ const Layout = props => {
 		</div>
 	)
 }
+
 
 export default Layout

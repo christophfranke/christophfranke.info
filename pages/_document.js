@@ -1,10 +1,13 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { StyleSheetServer } from 'aphrodite/no-important'
 
+import Tracking from '../util/tracking'
+
 export default class MyDocument extends Document {
-  static async getInitialProps ({ renderPage }) {
+  static async getInitialProps ({ renderPage, asPath }) {
     const { html, css } = StyleSheetServer.renderStatic(() => renderPage())
     const ids = css.renderedClassNames
+    Tracking.view(asPath)
     return { ...html, css, ids }
   }
 
