@@ -85,6 +85,7 @@ const AboutPage = props => {
 					<Button>View Projects</Button>
 				</Link>
 				<Button href="/static/Christoph%20Franke%20CV.pdf" download>Download CV</Button>
+				<Button href="/static/Christoph%20Franke%20Projects.pdf" download>Download project list</Button>
 				<EmailButton />
 			</div>
 		</Layout>
