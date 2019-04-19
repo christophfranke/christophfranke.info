@@ -9,6 +9,10 @@ const client = new KeenTracking({
 const view = url => {
   const host = process.browser ? window.location.host :
     (process.env.NODE_ENV === 'development' ? 'localhost' : 'christophfranke.info')
+
+  if (url.length > 1 && url[url.length-1] === '/') {
+    url = url.substr(0, url.length - 1);
+  }
   
   client.recordEvent('view', {
     url,
