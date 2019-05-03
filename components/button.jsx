@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 		marginBottom: '15px',
 		cursor: 'pointer',
 		':hover': {
-			color: style.color.blue,
+			color: style.color.purple,
 		}
 	}
 })

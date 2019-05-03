@@ -3,6 +3,7 @@ export default {
 		blue: 'rgb(57, 89, 142)',
 		green: 'rgb(111, 226, 197)',
 		red: 'rgb(209, 73, 95)',
+		purple: 'rgb(171, 126, 183)',
 		white: 'white'
 	},
 	font: {

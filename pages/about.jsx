@@ -64,10 +64,70 @@ const styles = StyleSheet.create({
 			marginLeft: '2vw',
 			marginBottom: '1vw',
 		}
+	},
+	companyList: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		justifyContent: 'space-between',
+		width: '90%',
+		margin: 'auto'
+
+	},
+	company: {
+		width: 'calc(47.5% - 62px)',
+		padding: '30px',
+		textAlign: 'center',
+		border: style.border,
+		borderRadius: '6px',
+		marginBottom: '3vw',
+		backgroundColor: style.background.transparent,
+		'@media (max-width: 800px)': {
+			width: '90vw'
+		},
+		'@media (max-width: 400px)': {
+			textAlign: 'left'
+		}
+	},
+	companiesHeadline: {
+		width: '100%',
+		textAlign: 'center',
+		marginBottom: '70px'
+	},
+	companyName: {
+		fontWeight: '300',
+		textTransform: 'uppercase',
+		marginBottom: '0.3em',
+		':hover': {
+			color: style.color.green
+		}
+	},
+	companyLink: {
+		color: 'white',
+		textDecoration: 'none'
+	},
+	position: {
+		display: 'block',
+		marginBottom: '3em'
+	},
+	logo: {
+		backgroundColor: 'white'
 	}
 })
 
+const Company = props => {
+	return (
+		<div className={css(styles.company)}>
+			<a href={props.company.url.url} target="_blank" className={css(styles.companyLink)}><img className={css(styles.logo)} src={props.company.logo.url} />
+			<h2 className={css(styles.companyName)}>{asText(props.company.name)}</h2></a>
+			<em className={css(styles.position)}>{asText(props.company.position)}</em>
+			<p>{asText(props.company.description)}</p>
+		</div>
+	)
+}
+
 const AboutPage = props => {
+	console.log(props.about.data.companies)
+
 	return (
 		<Layout>
 			<div className={css(styles.row)}>
@@ -87,6 +147,10 @@ const AboutPage = props => {
 				<Button href="/static/Christoph%20Franke%20CV.pdf" download>Download CV</Button>
 				<Button href="/static/Christoph%20Franke%20Projects.pdf" download>Download project list</Button>
 				<EmailButton />
+			</div>
+			<h1 className={css([styles.companiesHeadline, styles.headline])}>Employers and Contractors</h1>
+			<div className={css(styles.companyList)}>
+				{props.about.data.companies.map((company, index) => <Company company={company} key={index} />)}
 			</div>
 		</Layout>
 	)
