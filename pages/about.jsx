@@ -126,8 +126,6 @@ const Company = props => {
 }
 
 const AboutPage = props => {
-	console.log(props.about.data.companies)
-
 	return (
 		<Layout>
 			<div className={css(styles.row)}>

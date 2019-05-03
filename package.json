@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export && cd out/static && cp ./* .."
   },
   "repository": {
     "type": "git",
