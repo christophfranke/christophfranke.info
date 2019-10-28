@@ -110,7 +110,11 @@ const styles = StyleSheet.create({
 		marginBottom: '3em'
 	},
 	logo: {
-		backgroundColor: 'white'
+		backgroundColor: 'white',
+		transition: 'transform 0.2s ease-in-out',
+		':hover': {
+			transform: 'scale(1.1)'
+		}
 	}
 })
 
