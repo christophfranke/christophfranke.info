@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 	},
 	image: {
 		display: 'block',
-		// filter: 'grayscale(100%)',
+		width: '100%',
 		transition: 'filter .3s, opacity 0.3s',
 		borderRadius: '6px',
 		opacity: 0.9,
@@ -96,7 +96,7 @@ class SingleProject extends React.Component {
 						className={css(styles.container)}
 						onMouseEnter={this.mouseEnter}
 						onMouseLeave={this.mouseLeave}>
-						<Image className={css(styles.image)} image={this.props.project.data.image} />
+						<img className={css(styles.image)} src={this.props.project.data.image.url} />
 						<div className={css(styles.overlay, this.state.hover ? styles.overlayHover : null)}>
 							<h2 className={css(styles.title)}>{asText(this.props.project.data.title)}</h2>
 						</div>
