@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 		// filter: 'grayscale(100%)',
 		transition: 'filter .3s, opacity 0.3s',
 		borderRadius: '6px',
-		opacity: 0.5,
+		opacity: 0.9,
 		':hover': {
 			filter: 'grayscale(0)',
 			opacity: 1
